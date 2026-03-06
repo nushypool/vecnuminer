@@ -1,8 +1,8 @@
-# vecnuminer
+# Vecno NushyPool Miner
+High-performance CPU/GPU miner for the Vecno Blockchain, written in Rust and optimized for **for mining in NushyPool**.
 
 This miner supports Nvidia and AMD GPU's.
-
-This miner is **for mining in NushyPool** and **does not include any devfee**.
+No **devfee**.
 
 ## Installation
 
@@ -10,6 +10,14 @@ This miner is **for mining in NushyPool** and **does not include any devfee**.
 
 This repository **does not include source code**.  
 Download the prebuilt binaries for Linux or Windows from this repo’s Releases page and extract them.
+
+#### One‑line install (Linux)
+
+```sh
+curl -L https://github.com/nushypool/vecnuminer-release/releases/latest/download/vecnuminer-linux-x86_64.tar.gz | tar -xz
+```
+
+This extracts `vecnuminer`, `libvecnocuda.so`, and `libvecnoopencl.so` into the current directory.
 
 ### Removing Plugins
 
