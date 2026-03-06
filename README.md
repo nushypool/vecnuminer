@@ -6,41 +6,42 @@ No **devfee**.
 
 ## Installation
 
-### From Binaries
-
-This repository **does not include source code**.  
+### From Binaries  
 Download the prebuilt binaries for Linux or Windows from this repo’s Releases page and extract them.
 
-#### One‑line install (Linux – Ubuntu 20.04 / mining OS images)
+#### One‑line install (mmpOS / HiveOS)
 
 Use this for **mmpOS / HiveOS / older glibc systems** (most compatible build):
 
 ```sh
+mkdir -p vecnuminer && cd vecnuminer
 curl -L https://github.com/nushypool/vecnuminer-release/releases/latest/download/vecnuminer-linux-x86_64-ubuntu20.04.tar.gz | tar -xz
 ```
 
-This extracts `vecnuminer`, `libvecnocuda.so`, and `libvecnoopencl.so` into the current directory.
+This creates a directory named `vecnuminer` and downloads/extracts the files into it.
 
 #### One‑line install (Linux – modern distros)
 
 Use this for **Ubuntu 22.04+ / newer glibc systems**:
 
 ```sh
+mkdir -p vecnuminer && cd vecnuminer
 curl -L https://github.com/nushypool/vecnuminer-release/releases/latest/download/vecnuminer-linux-x86_64.tar.gz | tar -xz
 ```
 
-This extracts `vecnuminer`, `libvecnocuda.so`, and `libvecnoopencl.so` into the current directory.
+This creates a directory named `vecnuminer` and downloads/extracts the files into it.
 
 #### One‑line install (Windows)
 
 Run in PowerShell:
 
 ```powershell
+mkdir vecnuminer | Out-Null; Set-Location vecnuminer
 Invoke-WebRequest -Uri https://github.com/nushypool/vecnuminer-release/releases/latest/download/vecnuminer-windows-x86_64.tar.gz -OutFile vecnuminer-windows-x86_64.tar.gz
 tar -xzf vecnuminer-windows-x86_64.tar.gz
 ```
 
-This extracts `vecnuminer.exe`, `vecnocuda.dll`, and `vecnoopencl.dll` into the current directory.
+This creates a directory named `vecnuminer` and downloads/extracts the files into it.
 
 ### Removing Plugins
 
