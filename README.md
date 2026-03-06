@@ -11,13 +11,36 @@ No **devfee**.
 This repository **does not include source code**.  
 Download the prebuilt binaries for Linux or Windows from this repo’s Releases page and extract them.
 
-#### One‑line install (Linux)
+#### One‑line install (Linux – Ubuntu 20.04 / mining OS images)
+
+Use this for **mmpOS / HiveOS / older glibc systems** (most compatible build):
+
+```sh
+curl -L https://github.com/nushypool/vecnuminer-release/releases/latest/download/vecnuminer-linux-x86_64-ubuntu20.04.tar.gz | tar -xz
+```
+
+This extracts `vecnuminer`, `libvecnocuda.so`, and `libvecnoopencl.so` into the current directory.
+
+#### One‑line install (Linux – modern distros)
+
+Use this for **Ubuntu 22.04+ / newer glibc systems**:
 
 ```sh
 curl -L https://github.com/nushypool/vecnuminer-release/releases/latest/download/vecnuminer-linux-x86_64.tar.gz | tar -xz
 ```
 
 This extracts `vecnuminer`, `libvecnocuda.so`, and `libvecnoopencl.so` into the current directory.
+
+#### One‑line install (Windows)
+
+Run in PowerShell:
+
+```powershell
+Invoke-WebRequest -Uri https://github.com/nushypool/vecnuminer-release/releases/latest/download/vecnuminer-windows-x86_64.tar.gz -OutFile vecnuminer-windows-x86_64.tar.gz
+tar -xzf vecnuminer-windows-x86_64.tar.gz
+```
+
+This extracts `vecnuminer.exe`, `vecnocuda.dll`, and `vecnoopencl.dll` into the current directory.
 
 ### Removing Plugins
 
