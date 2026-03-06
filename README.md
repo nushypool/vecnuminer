@@ -1,8 +1,14 @@
 # Vecno NushyPool Miner
-High-performance CPU/GPU miner for the Vecno Blockchain, written in Rust and optimized for **for mining in NushyPool**.
+High‑performance GPU miner for the Vecno blockchain, optimized for **NushyPool**.
 
-This miner supports Nvidia and AMD GPU's.
-No **devfee**.
+## Features
+- **0% devfee** when mining on NushyPool.
+- **Tuned for NushyPool** with streamlined pool defaults.
+- **Easy to use** with clear, documented commands.
+- **Low CPU overhead** during GPU mining.
+- **NVIDIA + AMD GPU support**.
+- **mmpOS / HiveOS‑friendly** Linux build available.
+
 
 ## Installation
 
@@ -15,7 +21,7 @@ Use this for **mmpOS / HiveOS / older glibc systems** (most compatible build):
 
 ```sh
 mkdir -p vecnuminer && cd vecnuminer
-curl -L https://github.com/nushypool/vecnuminer-release/releases/latest/download/vecnuminer-linux-x86_64-ubuntu20.04.tar.gz | tar -xz
+curl -L https://github.com/nushypool/vecnuminer/releases/latest/download/vecnuminer-linux-x86_64-ubuntu20.04.tar.gz | tar -xz
 ```
 
 This creates a directory named `vecnuminer` and downloads/extracts the files into it.
@@ -26,7 +32,7 @@ Use this for **Ubuntu 22.04+ / newer glibc systems**:
 
 ```sh
 mkdir -p vecnuminer && cd vecnuminer
-curl -L https://github.com/nushypool/vecnuminer-release/releases/latest/download/vecnuminer-linux-x86_64.tar.gz | tar -xz
+curl -L https://github.com/nushypool/vecnuminer/releases/latest/download/vecnuminer-linux-x86_64.tar.gz | tar -xz
 ```
 
 This creates a directory named `vecnuminer` and downloads/extracts the files into it.
@@ -37,7 +43,7 @@ Run in PowerShell:
 
 ```powershell
 mkdir vecnuminer | Out-Null; Set-Location vecnuminer
-Invoke-WebRequest -Uri https://github.com/nushypool/vecnuminer-release/releases/latest/download/vecnuminer-windows-x86_64.tar.gz -OutFile vecnuminer-windows-x86_64.tar.gz
+Invoke-WebRequest -Uri https://github.com/nushypool/vecnuminer/releases/latest/download/vecnuminer-windows-x86_64.tar.gz -OutFile vecnuminer-windows-x86_64.tar.gz
 tar -xzf vecnuminer-windows-x86_64.tar.gz
 ```
 
@@ -59,18 +65,26 @@ Relevant options:
 - `--mining-address <MINING_ADDRESS>`  
 - `--stratum-worker <WORKER_NAME>`  
 - `--stratum-port <STRATUM_PORT>` (optional, default `50010`)  
+- `--pool-region <as|eu|us>` (optional; auto‑select by latency if omitted)  
 - `--stratum-password <WORKER_PASSWORD>` (optional)  
 - `--cuda-device`, `--cuda-disable`, `--opencl-device`, `--opencl-amd-disable`, etc. (GPU options)  
 
-Note: `--stratum-server` is ignored; the pool is fixed to `nushypool.com`.
+Note: `--stratum-server` is ignored; the pool is fixed to `nushypool.com`.  
+If `--pool-region` is not set, the miner auto‑selects the lowest‑latency region.
 
 # Mining Pool (NushyPool only)
 
 ```
-./vecnuminer --mining-address <MINING_ADDRESS> --stratum-worker <WORKER_NAME> --stratum-port <STRATUM_PORT> --stratum-password <WORKER_PASSWORD>
+./vecnuminer --mining-address <VECNO_ADDRESS> --stratum-worker <WORKER_NAME>
 ```
 
 Running this will activate all available GPU devices.
+
+Example with a region preference:
+
+```
+./vecnuminer --mining-address <VECNO_ADDRESS> --stratum-worker <WORKER_NAME> --pool-region eu
+```
 
 ## Support
 
