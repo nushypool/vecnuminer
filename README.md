@@ -89,3 +89,9 @@ Example with a region preference:
 ## Support
 
 This mining software is experimental, testnet mining is disabled.
+
+Bug reports are welcome. Please open a GitHub issue and include:
+- OS and GPU model(s)
+- Miner version
+- Full command line used
+- Relevant log output
