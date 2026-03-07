@@ -89,7 +89,9 @@ Example with a region preference:
 # Example HiveOS configuration
 Miner name:        vecnuminer
 Installation URL:  https://github.com/nushypool/vecnuminer/releases/download/<version>/vecnuminer-hiveos.tar.gz
+
 Hash algorithm:    empty
+
 Wallet and worker template: %WAL%
 Pool URL:          nushypool.com
 Pass:              empty
