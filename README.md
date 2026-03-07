@@ -93,14 +93,15 @@ Use these values in the HiveOS custom miner form:
 | Field | Value |
 | --- | --- |
 | Miner name | `vecnuminer` |
-| Installation URL | `https://github.com/nushypool/vecnuminer/releases/download/<version>/vecnuminer-hiveos.tar.gz` |
+| Installation URL | `https://github.com/nushypool/vecnuminer/releases/download/v0.0.4/vecnuminer-r4.tar.gz` |
 | Hash algorithm | leave empty |
 | Wallet and worker template | `%WAL%` |
 | Pool URL | `as.nushypool.com:50010` |
 | Pass | leave empty |
 | Extra config arguments | `--pool-region as --stratum-port 50010 --stratum-worker hiveosworker` |
 
-<img width="668" height="692" alt="image" src="https://github.com/user-attachments/assets/e44c4fbc-47ec-4cdb-b3e6-267eb0ae615c" />
+<img width="680" height="691" alt="image" src="https://github.com/user-attachments/assets/cdf57250-44a4-4567-aa9a-581647dfc717" />
+
 
 
 ## Example mmPos Configuration
