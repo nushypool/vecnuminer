@@ -86,17 +86,25 @@ Example with a region preference:
 ./vecnuminer --mining-address <VECNO_ADDRESS> --stratum-worker <WORKER_NAME> --pool-region eu
 ```
 
-# Example HiveOS configuration
-Miner name:        vecnuminer
-Installation URL:  https://github.com/nushypool/vecnuminer/releases/download/<version>/vecnuminer-hiveos.tar.gz
-Hash algorithm:    empty
-Wallet and worker template: %WAL%
-Pool URL:          nushypool.com
-Pass:              empty
-Extra config arguments: --pool-region as --stratum-port 50010 --stratum-worker hiveosworker 
-<img width="674" height="699" alt="image" src="https://github.com/user-attachments/assets/429a9533-8b73-43ff-bbb4-2b6d094b6cf1" />
+## Example HiveOS Configuration
 
-# Example mmPos configuration
+Use these values in the HiveOS custom miner form:
+
+| Field | Value |
+| --- | --- |
+| Miner name | `vecnuminer` |
+| Installation URL | `https://github.com/nushypool/vecnuminer/releases/download/<version>/vecnuminer-hiveos.tar.gz` |
+| Hash algorithm | leave empty |
+| Wallet and worker template | `%WAL%` |
+| Pool URL | `as.nushypool.com:50010` |
+| Pass | leave empty |
+| Extra config arguments | `--pool-region as --stratum-port 50010 --stratum-worker hiveosworker` |
+
+<img width="668" height="692" alt="image" src="https://github.com/user-attachments/assets/e44c4fbc-47ec-4cdb-b3e6-267eb0ae615c" />
+
+
+## Example mmPos Configuration
+
 Todo
 
 ## Support
