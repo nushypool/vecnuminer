@@ -72,6 +72,11 @@ Relevant options:
 Note: `--stratum-server` is ignored; the pool is fixed to `nushypool.com`.  
 If `--pool-region` is not set, the miner auto‑selects the lowest‑latency region.
 
+> [!CAUTION]
+> - Pure AMD rigs still require the latest drivers and `--cuda-disable`
+> - Mixed AMD&NVIDIA rigs works well, and do not need  `--cuda-disable`
+> - To achieve the best hashrate, the latest drivers are required
+
 # Mining Pool (NushyPool only)
 
 ```
