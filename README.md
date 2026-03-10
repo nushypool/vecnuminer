@@ -67,15 +67,20 @@ Relevant options:
 - `--stratum-port <STRATUM_PORT>` (optional, default `50010`)  
 - `--pool-region <as|eu|us>` (optional; auto‑select by latency if omitted)  
 - `--stratum-password <WORKER_PASSWORD>` (optional)  
-- `--cuda-device`, `--cuda-disable`, `--opencl-device`, `--opencl-amd-disable`, etc. (GPU options)  
+- `--cuda-device`, `--cuda-disable`, `--opencl-device`, `--opencl-amd-disable`, etc. (GPU options) 
+- `--list-gpus` - List detected GPUs and exit
+- `--cuda-lock-core-clocks <CUDA_LOCK_CORE_CLOCKS>` - Lock core clocks eg: ,1200, [default: 0]
+- `--cuda-lock-mem-clocks <CUDA_LOCK_MEM_CLOCKS>` - Lock mem clocks eg: ,810, [default: 0]
+- `-v, --version` - Print version information and exit
+
 
 Note: `--stratum-server` is ignored; the pool is fixed to `nushypool.com`.  
 If `--pool-region` is not set, the miner auto‑selects the lowest‑latency region.
 
 > [!CAUTION]
-> - Pure AMD rigs still require the latest drivers and `--cuda-disable`
-> - Mixed AMD&NVIDIA rigs works well, and do not need  `--cuda-disable`
 > - To achieve the best hashrate, the latest drivers are required
+
+
 
 # Mining Pool (NushyPool only)
 
@@ -101,9 +106,9 @@ Use these values in the HiveOS custom miner form:
 | Installation URL | `https://github.com/nushypool/vecnuminer/releases/download/v0.0.4/vecnuminer-r4.tar.gz` |
 | Hash algorithm | leave empty |
 | Wallet and worker template | `%WAL%` |
-| Pool URL | `as.nushypool.com:50010` |
+| Pool URL | `eu.nushypool.com:50010` |
 | Pass | leave empty |
-| Extra config arguments | `--pool-region as --stratum-port 50010 --stratum-worker hiveosworker` |
+| Extra config arguments | `--pool-region eu --stratum-port 50010 --stratum-worker hiveosworker` |
 
 <img width="680" height="691" alt="image" src="https://github.com/user-attachments/assets/cdf57250-44a4-4567-aa9a-581647dfc717" />
 
