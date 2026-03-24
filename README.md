@@ -1,7 +1,7 @@
 
 > [!WARNING]
 > This repository is archived and no longer maintained.
-> Please use the successor project: [new-repo](https://github.com/nushypool/npminer)
+> Please use the successor project: [NushyPool Miner](https://github.com/nushypool/npminer)
 
 # Vecno NushyPool Miner
 High‑performance GPU miner for the Vecno blockchain, optimized for **NushyPool**.
